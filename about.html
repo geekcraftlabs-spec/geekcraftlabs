@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>About Us - Geek Craft Labs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #2d2d2d;
+            --accent-color: #6b46c1;
+            --text-color: #ffffff;
+        }
+
+        body {
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        nav {
+            background-color: var(--secondary-color);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        section {
+            padding: 5rem 2rem;
+        }
+
+        .about-header {
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            padding: 2rem;
+            margin-top: 60px;
+        }
+
+        .about-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: rotateIn 1.2s ease-out;
+            transform-origin: center;
+            backface-visibility: hidden;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro-section {
+            text-align: center;
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+        }
+
+        .story-section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+        }
+
+        .why-choose-us {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .reason-card {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .reason-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .reason-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .importance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .importance-item {
+            background-color: var(--secondary-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .importance-item:hover {
+            transform: scale(1.05);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        @keyframes rotateIn {
+            from {
+                transform: perspective(400px) rotateY(90deg);
+                opacity: 0;
+            }
+            to {
+                transform: perspective(400px) rotateY(0deg);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .about-header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        .wave-text {
+            display: inline-block;
+        }
+
+        .wave-letter {
+            display: inline-block;
+            animation: wave-rise 0.9s ease-in-out;
+            animation-fill-mode: backwards;
+            margin-right: -0.05em;
+        }
+
+        .wave-letter.space {
+            margin-right: 0.3em;
+        }
+
+        @keyframes wave-rise {
+            0% {
+                transform: translateY(60px) rotate(10deg);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(-8px) rotate(-5deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(0) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        .about-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .intro-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .story-section p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .reason-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .reason-card h3 {
+            font-size: 1.4rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .importance-item p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .intro-section p,
+            .story-section p {
+                font-size: 1.1rem;
+            }
+
+            .reason-card p,
+            .importance-item p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Responsive Design Updates */
+        @media screen and (max-width: 768px) {
+            .about-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-content {
+                padding: 1rem;
+            }
+
+            .intro-section,
+            .story-section {
+                padding: 1.5rem;
+            }
+
+            .reason-card {
+                padding: 1.5rem;
+            }
+
+            nav ul {
+                padding: 0 1rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .about-header h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .intro-section p,
+            .story-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="about-header">
+        <h1 class="wave-text">
+            <span class="wave-letter" style="animation-delay: 0.0s">A</span>
+            <span class="wave-letter" style="animation-delay: 0.1s">b</span>
+            <span class="wave-letter" style="animation-delay: 0.2s">o</span>
+            <span class="wave-letter" style="animation-delay: 0.3s">u</span>
+            <span class="wave-letter" style="animation-delay: 0.4s">t</span>
+            <span class="wave-letter space" style="animation-delay: 0.5s">&nbsp;</span>
+            <span class="wave-letter" style="animation-delay: 0.6s">G</span>
+            <span class="wave-letter" style="animation-delay: 0.7s">e</span>
+            <span class="wave-letter" style="animation-delay: 0.8s">e</span>
+            <span class="wave-letter" style="animation-delay: 0.9s">k</span>
+            <span class="wave-letter space" style="animation-delay: 1.0s">&nbsp;</span>
+            <span class="wave-letter" style="animation-delay: 1.1s">C</span>
+            <span class="wave-letter" style="animation-delay: 1.2s">r</span>
+            <span class="wave-letter" style="animation-delay: 1.3s">a</span>
+            <span class="wave-letter" style="animation-delay: 1.4s">f</span>
+            <span class="wave-letter" style="animation-delay: 1.5s">t</span>
+            <span class="wave-letter space" style="animation-delay: 1.6s">&nbsp;</span>
+            <span class="wave-letter" style="animation-delay: 1.7s">L</span>
+            <span class="wave-letter" style="animation-delay: 1.8s">a</span>
+            <span class="wave-letter" style="animation-delay: 1.9s">b</span>
+            <span class="wave-letter" style="animation-delay: 2.0s">s</span>
+        </h1>
+    </div>
+
+    <section class="about-content">
+        <div class="intro-section">
+            <p>At Geek Craft Labs, we believe every business deserves a strong online presence. Founded by two brothers with a shared passion for web development, our mission is to make high-quality websites accessible to everyone, regardless of their budget.</p>
+        </div>
+
+        <div class="story-section">
+            <h2>Our Story</h2>
+            <p>Geek Craft Labs was born out of a simple observation: while websites are essential for businesses of all sizes, the cost of creating and maintaining them is often prohibitively high—especially for startups and small businesses. With years of experience in designing and developing all types of websites, from simple static pages to dynamic, interactive platforms, we knew we could do better.</p>
+            <br>
+            <p>We set out to create a service that offers affordable, below-market pricing without compromising on quality. Since then, we've been helping businesses, entrepreneurs, and creatives bring their ideas to life online.</p>
+        </div>
+
+        <h2>Why Choose Us?</h2>
+        <div class="why-choose-us">
+            <div class="reason-card">
+                <h3>Experienced Team</h3>
+                <p>Our team consists of skilled professionals with expertise in creating websites that are both functional and visually appealing.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Affordable Pricing</h3>
+                <p>We understand the challenges startups and small businesses face, which is why we offer competitive pricing tailored to your budget.</p>
+            </div>
+            <div class="reason-card">
+                <h3>High-Quality Solutions</h3>
+                <p>Whether you need a sleek portfolio, a feature-rich e-commerce store, or a custom solution, we ensure the end product meets your needs and exceeds your expectations.</p>
+            </div>
+            <div class="reason-card">
+                <h3>Personalized Service</h3>
+                <p>We listen to your ideas, understand your goals, and deliver a website that reflects your brand perfectly.</p>
+            </div>
+        </div>
+
+        <div class="story-section">
+            <h2>The Importance of a Website</h2>
+            <p>In today's digital age, having a website is no longer optional—it's essential. A website:</p>
+            <div class="importance-grid">
+                <div class="importance-item">
+                    <p>Helps your business reach a wider audience.</p>
+                </div>
+                <div class="importance-item">
+                    <p>Builds credibility and trust with potential customers.</p>
+                </div>
+                <div class="importance-item">
+                    <p>Provides a platform to showcase your products, services, or creative work.</p>
+                </div>
+                <div class="importance-item">
+                    <p>Ensures your business is accessible 24/7.</p>
+                </div>
+            </div>
+            <br>
+            <p>At Geek Craft Labs, we're committed to empowering businesses of all sizes with the tools they need to succeed online. Whether you're just starting out or looking to upgrade your existing site, we're here to help.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Geek Craft Labs. All rights reserved.</p>
+    </footer>
+</body>
+</html>
