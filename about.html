@@ -47,6 +47,7 @@
             font-size: 1.2rem;
             transition: color 0.3s;
             padding: 0.5rem 1rem;
+            white-space: nowrap;
         }
 
         nav a:hover {
@@ -289,6 +290,52 @@
                 font-size: 1rem;
             }
         }
+
+        .services-section {
+            margin-bottom: 4rem;
+            padding: 2rem;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background-color: var(--primary-color);
+            padding: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .word {
+            white-space: nowrap;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            text-align: center;
+            padding: 2rem;
+        }
     </style>
 </head>
 <body>
@@ -302,31 +349,70 @@
 
     <div class="about-header">
         <h1 class="wave-text">
-            <span class="wave-letter" style="animation-delay: 0.0s">A</span>
-            <span class="wave-letter" style="animation-delay: 0.1s">b</span>
-            <span class="wave-letter" style="animation-delay: 0.2s">o</span>
-            <span class="wave-letter" style="animation-delay: 0.3s">u</span>
-            <span class="wave-letter" style="animation-delay: 0.4s">t</span>
+            <span class="word">
+                <span class="wave-letter" style="animation-delay: 0.0s">A</span>
+                <span class="wave-letter" style="animation-delay: 0.1s">b</span>
+                <span class="wave-letter" style="animation-delay: 0.2s">o</span>
+                <span class="wave-letter" style="animation-delay: 0.3s">u</span>
+                <span class="wave-letter" style="animation-delay: 0.4s">t</span>
+            </span>
             <span class="wave-letter space" style="animation-delay: 0.5s">&nbsp;</span>
-            <span class="wave-letter" style="animation-delay: 0.6s">G</span>
-            <span class="wave-letter" style="animation-delay: 0.7s">e</span>
-            <span class="wave-letter" style="animation-delay: 0.8s">e</span>
-            <span class="wave-letter" style="animation-delay: 0.9s">k</span>
+            <span class="word">
+                <span class="wave-letter" style="animation-delay: 0.6s">G</span>
+                <span class="wave-letter" style="animation-delay: 0.7s">e</span>
+                <span class="wave-letter" style="animation-delay: 0.8s">e</span>
+                <span class="wave-letter" style="animation-delay: 0.9s">k</span>
+            </span>
             <span class="wave-letter space" style="animation-delay: 1.0s">&nbsp;</span>
-            <span class="wave-letter" style="animation-delay: 1.1s">C</span>
-            <span class="wave-letter" style="animation-delay: 1.2s">r</span>
-            <span class="wave-letter" style="animation-delay: 1.3s">a</span>
-            <span class="wave-letter" style="animation-delay: 1.4s">f</span>
-            <span class="wave-letter" style="animation-delay: 1.5s">t</span>
+            <span class="word">
+                <span class="wave-letter" style="animation-delay: 1.1s">C</span>
+                <span class="wave-letter" style="animation-delay: 1.2s">r</span>
+                <span class="wave-letter" style="animation-delay: 1.3s">a</span>
+                <span class="wave-letter" style="animation-delay: 1.4s">f</span>
+                <span class="wave-letter" style="animation-delay: 1.5s">t</span>
+            </span>
             <span class="wave-letter space" style="animation-delay: 1.6s">&nbsp;</span>
-            <span class="wave-letter" style="animation-delay: 1.7s">L</span>
-            <span class="wave-letter" style="animation-delay: 1.8s">a</span>
-            <span class="wave-letter" style="animation-delay: 1.9s">b</span>
-            <span class="wave-letter" style="animation-delay: 2.0s">s</span>
+            <span class="word">
+                <span class="wave-letter" style="animation-delay: 1.7s">L</span>
+                <span class="wave-letter" style="animation-delay: 1.8s">a</span>
+                <span class="wave-letter" style="animation-delay: 1.9s">b</span>
+                <span class="wave-letter" style="animation-delay: 2.0s">s</span>
+            </span>
         </h1>
     </div>
 
     <section class="about-content">
+        <div class="services-section">
+            <h2>Our Services</h2>
+            <p>At Geek Craft Labs, we offer a comprehensive range of web development services designed to meet your unique needs. Whether you're an entrepreneur, a small business owner, or a creative individual, we have the perfect solution for you.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>E-Commerce Website Development</h3>
+                    <p>Turn your business into a digital powerhouse with our custom e-commerce solutions. We create secure, user-friendly online stores that make it easy for your customers to browse, shop, and check out.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Website Design</h3>
+                    <p>From sleek, static designs to dynamic, interactive masterpieces, we bring your vision to life. No matter the complexity, we deliver designs that are visually stunning and responsive across all devices.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Monthly Website Maintenance</h3>
+                    <p>Stay worry-free with our reliable maintenance services. We handle updates, fix bugs, and ensure your website is always running smoothly, so you can focus on your business.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Website Hosting</h3>
+                    <p>Say goodbye to technical headaches! We provide affordable, fast, and secure website hosting services tailored to your needs.</p>
+                </div>
+                <div class="service-card">
+                    <h3>24/7 Support</h3>
+                    <p>We're here for you anytime, day or night. Our dedicated support team ensures you never face an issue alone, whether it's a minor tweak or a critical concern.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Custom Web Solutions</h3>
+                    <p>Have a unique idea? We're up for the challenge! From interactive tools to specialized integrations, we create custom solutions that set your website apart.</p>
+                </div>
+            </div>
+        </div>
+
         <div class="intro-section">
             <p>At Geek Craft Labs, we believe every business deserves a strong online presence. Founded by two brothers with a shared passion for web development, our mission is to make high-quality websites accessible to everyone, regardless of their budget.</p>
         </div>
@@ -381,7 +467,7 @@
     </section>
 
     <footer>
-        <p>&copy; 2023 Geek Craft Labs. All rights reserved.</p>
+        <p>&copy; 2026 Geek Craft Labs. All rights reserved.</p>
     </footer>
 </body>
 </html>
